@@ -2,6 +2,7 @@
 /**
  * CssReport
  *
+ * responsible for coming up with interesting analysis of the parsed css file
  *
  */
 class CssReport

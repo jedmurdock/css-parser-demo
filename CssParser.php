@@ -2,8 +2,16 @@
 /**
  * CssParser
  *
- * this isn't a real parser, just generates some stats based on a couple of regexes
- * and creates a 'result.json' file
+ * this isn't a real parser it just splits out some structural elements of the css file
+ * using regexes
+ *
+ * a real parser would step through the file one character at a time or otherwise
+ * tokenize the subject and look at each one to build a syntax tree
+ *
+ * a lexer would create language tokens and use a grammar and goes well beyond my expertise
+ *
+ * i also realize that using regexes repeatedly on a potentially large dataset like this
+ * is not at all efficient...
  *
  */
 class CssParser
