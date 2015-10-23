@@ -25,9 +25,9 @@
         $('#divReportData').html('');
         $.get( "report.php", function( response ) {
           if ( response.status == "unavailable" ) {
-            $('#divMsg .alert').addClass('alert-success');
-            $('#divMsg .alert').html("Report unavailable. Please try uploading another CSS file.");
-            $('#divMsg .alert').show();
+            $('.alert').addClass('alert-success');
+            $('.alert').html("Report unavailable. Please try uploading another CSS file.");
+            $('.alert').show();
           }
           else if( response.status == "success" ) {
             $('#divReportData').append('<h3>Colors : ' + response.data['summary']['num_colors'] +  '</h3>');
@@ -40,22 +40,21 @@
       });
       // in reality i wouldn't mix ajax and normal page reload messaging like this
       <?php if ($errorMsg != null) : ?>
-        $('#divMsg .alert').addClass('alert-danger');
-        $('#divMsg .alert').html('<?= $errorMsg ?>');
-        $('#divMsg .alert').show();
+        $('.alert').addClass('alert-danger');
+        $('.alert').html('<?= $errorMsg ?>');
+        $('.alert').show();
       <?php endif; ?>
       <?php if ($successMsg != null) : ?>
-        $('#divMsg .alert').addClass('alert-success');
-        $('#divMsg .alert').html('<?= $successMsg ?>');
-        $('#divMsg .alert').show();
+        $('.alert').addClass('alert-success');
+        $('.alert').html('<?= $successMsg ?>');
+        $('.alert').show();
       <?php endif; ?>
     });
   </script>
   <div class="container" role="main">
 
-    <div id="divMsg">
-        <div class="alert" role="alert" style="display:none"></div>
-    </div>
+    <div>&nbsp;</div>
+    <div class="alert" role="alert" style="display:none"></div>
 
     <div class="page-header">
       <h1>Simple CSS Report</h1>
