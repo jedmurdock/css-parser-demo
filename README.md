@@ -1,1 +1,1 @@
-this is just a code demo
+This was a timed code challenge for Creative Market to create a web app that uploads a css file, parses some "useful" information from it, and provides a report. Not too exciting, but it works and it helped me get the job!
